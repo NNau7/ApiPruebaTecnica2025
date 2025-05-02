@@ -63,7 +63,7 @@ update-database
   ```bash
   dotnet run
   ```
--La documentación Swagger estará disponible en:
+- La documentación Swagger estará disponible en:
 ```bash
 https://localhost:<puerto>/swagger
 ```
