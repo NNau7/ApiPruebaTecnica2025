@@ -45,7 +45,7 @@ cd <ApiPruebaTecnica2025>
 -Editar el archivo appsettings.json para definir la cadena de conexión:
   ```java
   "ConnectionStrings": {
-    "ApiConnection": "Data Source=MAURIPCWINDOW;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;DataBase=ProductsDB"
+    "ApiConnection": "Data Source=;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;DataBase=ProductsDB"
   }
  ```
 
@@ -64,9 +64,9 @@ update-database
   dotnet run
   ```
 - La documentación Swagger estará disponible en:
-```bash
-https://localhost:<puerto>/swagger
-```
+  ```bash
+  https://localhost:<puerto>/swagger
+  ```
 
 ## 📚 Endpoints
 Categorías
