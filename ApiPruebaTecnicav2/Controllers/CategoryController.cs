@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using APIPruebaTecnicav1.Data;
-using APIPruebaTecnicav1.Models;
+using APIPruebaTecnicav2.Data;
+using APIPruebaTecnicav2.Models;
 
 [ApiController]
 [Route("api/[controller]")]

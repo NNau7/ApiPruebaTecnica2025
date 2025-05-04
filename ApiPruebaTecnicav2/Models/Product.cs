@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace APIPruebaTecnicav1.Models
+namespace APIPruebaTecnicav2.Models
 {
     public class Product
     {

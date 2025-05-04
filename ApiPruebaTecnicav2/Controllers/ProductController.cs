@@ -1,5 +1,5 @@
-﻿using APIPruebaTecnicav1.Data;
-using APIPruebaTecnicav1.Models;
+﻿using APIPruebaTecnicav2.Data;
+using APIPruebaTecnicav2.Models;
 using ApiPruebaTecnicav2.Dtos;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;

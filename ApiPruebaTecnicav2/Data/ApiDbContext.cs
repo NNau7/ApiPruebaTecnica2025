@@ -1,7 +1,7 @@
-﻿using APIPruebaTecnicav1.Models;
+﻿using APIPruebaTecnicav2.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace APIPruebaTecnicav1.Data
+namespace APIPruebaTecnicav2.Data
 {
     public class ApiDbContext : DbContext
     {

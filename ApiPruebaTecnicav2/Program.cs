@@ -1,4 +1,4 @@
-using APIPruebaTecnicav1.Data;
+using APIPruebaTecnicav2.Data;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Microsoft.OpenApi.Models;
@@ -6,13 +6,30 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ApiConnection")));
+var provider = builder.Configuration["DatabaseSettings:Provider"];
+var connectionString = builder.Configuration["DatabaseSettings:ApiConnection"];
+builder.Services.AddDbContext<ApiDbContext>(options =>
+{
+    switch (provider)
+    {
+        case "SQL":
+            options.UseSqlServer(connectionString);
+            break;
+        case "MYSQL":
+            options.UseMySql(connectionString,ServerVersion.AutoDetect("ApiConnection")); 
+            break;
+        case "POSTGRESQL":
+            options.UseNpgsql(connectionString);
+            break;
+        default :
+            throw new Exception($"Proveedor de base de datos no soportado:{provider}");
+            
+    }
+});
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();

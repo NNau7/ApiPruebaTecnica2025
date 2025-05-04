@@ -1,4 +1,4 @@
-﻿using APIPruebaTecnicav1.Models;
+﻿using APIPruebaTecnicav2.Models;
 using ApiPruebaTecnicav2.Dtos;
 using AutoMapper;
 
