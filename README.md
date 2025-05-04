@@ -43,7 +43,7 @@ cd <ApiPruebaTecnica2025>
 ## 🔧 Configuracion
 
 -Editar el archivo appsettings.json para definir la cadena de conexión:
-  -{Provider}:significa el servicio de DB con la que correra el API, actualmente cuenta con soporte en SQL,MYSQL Y POSTGRESQL.
+-{Provider}:significa el servicio de DB con la que correra el API, actualmente cuenta con soporte en SQL,MYSQL Y POSTGRESQL.
   ```java
   "DatabaseSettings": {
       "Provider": "SQL",
