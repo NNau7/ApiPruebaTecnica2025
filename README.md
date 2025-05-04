@@ -43,11 +43,14 @@ cd <ApiPruebaTecnica2025>
 ## 🔧 Configuracion
 
 -Editar el archivo appsettings.json para definir la cadena de conexión:
+  -{Provider}:significa el servicio de DB con la que correra el API, actualmente cuenta con soporte en SQL,MYSQL Y POSTGRESQL.
   ```java
-  "ConnectionStrings": {
-    "ApiConnection": "Data Source=;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;DataBase=ProductsDB"
-  }
+  "DatabaseSettings": {
+      "Provider": "SQL",
+      "ApiConnection": "Data Source=;Database=ProductDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False"
+    }
  ```
+
 
 ## 🗃️ Migraciones
 ```bash
