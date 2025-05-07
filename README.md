@@ -37,7 +37,7 @@ Pasos para clonar el repositorio y trabajar localmente:
 
 ```bash
 git clone <https://github.com/NNau7/ApiPruebaTecnica2025.git>
-cd <ApiPruebaTecnica2025>
+cd <ApiPruebaTecnica2025\ApiPruebaTecnicav2>
 ```
 
 ## 🔧 Configuracion
@@ -54,12 +54,14 @@ cd <ApiPruebaTecnica2025>
 
 
 ## 🗃️ Migraciones
+-Primero instalar dotnet para ejecutar los comandos:
+
 ```bash
-dotnet ef update-database
+dotnet tool install --global dotnet-ef
 ```
-o tambien en la consola de paquete NuGet:
+-Luego ejecutar el comando para la migracion
 ```bash
-update-database
+dotnet ef database update
 ```
 
 ## ▶️ Ejecución
